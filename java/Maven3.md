@@ -2,25 +2,25 @@ Apache Maven3(Note:Maven3)
 
 1.是什么:
 	
-		a.java软件包
+		a.java语言开发的工具软件包
 		b.用于从组织项目结构－>项目发布整个过程构建的工具
-		c.同类:Make Ant(+lvy) Gradle
+		c.同类:Make,Ant(+lvy),Gradle
 		
 		
 2.干什么:
 
-		1.统一项目结构(约定优于配置,可以在超级pom(M2_HOME/lib/底下修改)里面修改，但是建议不要改，开发人员遵循一致的约定) 
-		2.统一项目构建过程(通过插件和插件的生命周期来处理构建的生命周期)
-		3.依赖包的和包版本的统一管理(只处理首层依赖，次层依赖Maven会在依赖包的pom中去寻找)
-		4.信息管理（统一生成项目网站和报表 site:deploy）
+		1.统一项目目录结构(约定优于配置,可以在超级pom(M2_HOME/lib/底下修改)里面修改，但是建议不要改，开发人员遵循一致的约定) 
+		2.统一项目构建过程(通过插件和插件的生命周期命令来处理构建的生命周期)
+		3.依赖包的和包版本的统一管理(自身主项目只处理首层依赖,次层依赖(依赖的依赖)Maven会在依赖包的pom.xml中自己去解析寻找)
+		4.信息管理（统一生成项目网站和报表 site:deploy,通过生命周期的插件来完成）
 		
-		产生包结构-> 编译 -> 测试->持续整合->依赖->报告->site
+		过程:产生包结构->编译->测试->持续整合->依赖->报告->site
 	
 	
 3.核心概念:
 
 		POM(pom.xml)
-		Coordinates(G A V)
+		Coordinates(GroupId ArtifactId Version)
 		ProjectLifecycle & PlugIn & Goal
 		Repositories & Dependency Management System
 
@@ -36,20 +36,20 @@ Apache Maven3(Note:Maven3)
 		 
 5.安装和目录:
 
-		download Maven
+		download Maven3
 		
-		EXPORT M2_HOME={SETUP_PATH}
+		EXPORT M2_HOME={SETUPED_MAVEN_ROOT_PATH}
 		
 		EXPORT PATH=$M2_HOME/bin:$PATH  
 		
 		mvn －v will: 
-				a.gen ~/.m2 folder & ~/.m2/repository & ~/.m2/setting.xml
-				b.download plugin jar
-				c.Maven中所有和项目生命周期相关的命令都是插件(compile,test,jar...)
+					a.gen ~/.m2 folder & ~/.m2/repository & ~/.m2/setting.xml
+					b.download plugin jar
+					c.Maven中所有和项目生命周期相关的命令都是插件(compile,test,jar...)
 		
 		
 		
-		~/.m2/repository的目录管理管理规则是  ~/.m2/repository/G/A/V／G-A-V*.jar
+		~/.m2/repository的目录结构管理规则是  ~/.m2/repository/G/A/V／G-A-V*.jar
 
   
 		目录结构:
