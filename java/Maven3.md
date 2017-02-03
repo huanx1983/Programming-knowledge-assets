@@ -73,7 +73,7 @@ Apache Maven3(Note:Maven3)
 
 		cd workspace
 		mvn  archetype:generate -DgroupId=com.huanx.ProjectName 
-								-DartifactId= ProjectName-Module 
+								-DartifactId= ProjectName-Module(n) 
 								-DpackageName=a.b.c
 		结构:
 		ProjectName-Module(n)/
@@ -104,7 +104,7 @@ Apache Maven3(Note:Maven3)
         ＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝    
         
         
-        ===＝＝＝＝＝＝＝＝＝＝如果需要运行有main方法的类则需要使用插件如下＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝ 		     
+        ===＝＝＝＝＝＝＝＝＝＝如果需要运行有main方法的类则需要使用插件如下＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝ 		     
         	  
        <build>
  			<plugins> 	  
@@ -131,9 +131,9 @@ Apache Maven3(Note:Maven3)
 			<plugins>
 		<build>	      
              		
-      ＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝
+      ＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝
 		cd ProjectName-Module(n)
-		
+
 		mvn  clean compile     产生classes
 		
 		mvn  clean test 	   运行测试    
@@ -153,15 +153,9 @@ Apache Maven3(Note:Maven3)
            		  		      target(mvn后产生的各种中间产品)/
            		  									      G-A-V.P
            		  									      classes/*.class
-	
-				
-				
-				
-				
 				
 
 7.生命周期
-		
 		
 		生命周期：三套生命周期分别有很多阶段，每套生命周期相互独立
 	
