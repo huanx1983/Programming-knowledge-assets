@@ -4,7 +4,7 @@ Apache Maven3(Note:Maven3)
 	
 		a.java语言开发的工具软件包
 		b.用于从组织项目结构－>项目发布整个过程构建的工具
-		c.同类:Make,Ant(+lvy),Gradle
+		c.同类:Make,Ant+lvy,Gradle
 		
 		
 2.干什么:
@@ -25,7 +25,7 @@ Apache Maven3(Note:Maven3)
 		Repositories & Dependency Management System
 
 
-4.对比：
+4.传统工具对比：
  
          Ant  	过程		随意		程序化		无生命周期
          
@@ -34,7 +34,7 @@ Apache Maven3(Note:Maven3)
 		 IDE	手动		依赖IDE	不可见		不可见
 		 
 		 
-5.安装和目录:
+5.安装和目录结构:
 
 		download Maven3
 		
@@ -54,14 +54,16 @@ Apache Maven3(Note:Maven3)
   
 		目录结构:
         M2_HOME/
-        		bin/	mvn等可执行文件 ...
-        		boot/	classloader ...
+        		bin/	mvn等可执行文件 shell ...
+        		boot/	plexus-classworlds classloader 代替默认的jvm的classloader ...
         		conf/   setting.xml ...		
-        		lib/	libs(*.jar) super pom(中央仓库的地址super pom中也配置了一份,maven-model-builder.jar中) ...  		
+        		lib/	maven自身的jar和依赖的libs(*.jar) 
+        				super pom(中央仓库的地址super pom中也配置了一份,
+        				在maven-model-builder.jar中) ...  		
         		
         
         
-        cp M2_HOME/conf/setting.xml to   ~/.m2/  then use this copy setting.xml:
+        cp M2_HOME/conf/setting.xml to   ~/.m2/  then use this copied setting.xml:
  
         可在setting.xml中配置节点Mirror(中央仓库地址),也可在项目pom中配置中央仓库地址
 		可在setting.xml中配置节点Proxies(上网代理)
@@ -70,17 +72,21 @@ Apache Maven3(Note:Maven3)
 6.命令行生成一个Maven模版项目：
 
 		cd workspace
-		mvn  archetype:generate -DgroupId=com.huanx.ProjectName -DartifactId= ProjectName-Module -DpackageName=com.huanx.somename
+		mvn  archetype:generate -DgroupId=com.huanx.ProjectName 
+								-DartifactId= ProjectName-Module 
+								-DpackageName=a.b.c
 		结构:
 		ProjectName-Module(n)/
              			   	  src/main/java
+             			   	  				/a/b/c/*.java
 	    	 			  	  src/main/resources
 	    	 		      	  src/test/java		 
+	    	 		      	  				/a/b/c/*Test.java
 	    	 		      	  src/test/resources	 
              		     	  pom.xml
              		     	  
-        ＝＝＝＝由于历史,Maven编译插件的source和target默认是1.3的编译器，新编译器的新特性请设置高版本的compiler source和target＝＝＝＝＝
-        
+        ＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝
+        由于历史,Maven编译插件的source和target默认是1.3的编译器，新编译器的新特性请设置高版本的compiler source和target(最新版本可能没有这个问题)
         <build>
  			<plugins>
 		        <plugin>
