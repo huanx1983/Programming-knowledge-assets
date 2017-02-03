@@ -179,11 +179,11 @@ Apache Maven3(Note:Maven3)
 
 8.坐标：
 
-		G:一个组织底下具体的项目			a.b.c.Project
+		G:一个组织底下具体的项目			a.b.c.ProjectName
 		A: 一个项目底下具体的模块		ProjectName-Module(n)
-		V:版本号						1.0
-		P:打包方式					jar war ...
-		C:不能自己定义					java-doc java-resource ...
+		V:版本号						1.0(SNAPSHOT,RELEASE)
+		P:打包方式					jar(默认) war ...
+		C:附件,不能自己定义,插件完成		java-doc java-resource ...
 		
 		G/A/V/A-V.P(C)
 
