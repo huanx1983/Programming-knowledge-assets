@@ -157,7 +157,7 @@ Apache Maven3(Note:Maven3)
 
 7.生命周期
 		
-		生命周期：三套生命周期分别有很多阶段，每套生命周期相互独立
+		生命周期：三套生命周期分别有很多阶段,生命周期内部的执行阶段后面阶段依赖于前面的阶段,每套生命周期相互独立互不依赖
 	
 		clean:pre-clean,clean,post-clean
 
@@ -219,56 +219,70 @@ Apache Maven3(Note:Maven3)
 
 11.聚合:
 
-			多工程各自作为模块聚合成一个工程，聚合后的各个工程有单独的pom，并在主工程中配置module结点引入子模块，主工程的package是pom。
+		多工程各自作为模块聚合成一个工程，聚合后的各个工程有单独的pom，并在主工程中配置module结点引入子模块，
+		主工程的package是pom
 
-		    ＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝
-		    <packaging>pom</packaging>
-			<modules>
-				<module>ProjectName-Module1</module>
-				<module>ProjectName-Module2</module>
-				<module>ProjectName-Module(n)</module>
-			</modules>
-		    ＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝
 
-		(1)如果子工程在主工程根目录则:
+		(1)如果子工程在主工程根目录内部:
 	    	mkdir ProjectName 	
 			cd ProjectName 
-			mvn  archetype:generate -DgroupId=com.huanx.ProjectName -DartifactId= ProjectName-All -DpackageName=com.huanx.somename
+			
+			mvn  archetype:generate 
+			-DgroupId=x.y.z.ProjectName 
+			-DartifactId= ProjectName 
+			-DpackageName=a.b.c
+			
 			mdkir ProjectName-Module(n)
 			cd ProjectName-Module(n)
-			mvn  archetype:generate -DgroupId=com.huanx.ProjectName -DartifactId= ProjectName-Module(n) -DpackageName=com.huanx.somename
+			mvn  archetype:generate 
+			-DgroupId=x.y.z.ProjectName 
+			-DartifactId= ProjectName-Module(n) 
+			-DpackageName=a.b.c
+			
 			cd ..
+			
 			maven clean compile 
 	   
-			在主工程的pom中配置
-		   	＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝
+			
+		   	＝＝＝＝＝＝＝＝＝＝＝＝在主工程的pom中配置＝＝＝＝＝＝＝＝＝＝＝＝＝＝
 			<modules>
 				<module>ProjectName-Module1</module>
 				<module>ProjectName-Module2</module>
 				<module>ProjectName-Module(n)</module>
 			</modules>
-			＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝
+			＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝
 		
 		
 		(2)如果子工程在主工程平行目录则:
 	    	mkdir ProjectName 
 			cd ProjectName 
-			mvn  archetype:generate -DgroupId=com.huanx.ProjectName -DartifactId= ProjectName-All -DpackageName=com.huanx.somename
+			
+			mvn  archetype:generate 
+			-DgroupId=x.y.z.ProjectName 
+			-DartifactId= ProjectName
+			-DpackageName=a.b.c
+			
 	    	cd ..
+	    	
 			mdkir ProjectName-Module(n)
 			cd ProjectName-Module(n)
-			mvn  archetype:generate -DgroupId=com.huanx.ProjectName -DartifactId= ProjectName-Module(n) -DpackageName=com.huanx.somename
-			cd ../ProjectName
+			mvn  archetype:generate 
+			-DgroupId=x.y.z.ProjectName 
+			-DartifactId= ProjectName-Module(n) 
+			-DpackageName=a.b.c
+			
+			cd ..
+			cd ProjectName
 			maven clean compile 
 			
-			在主工程的pom中配置
-		    ＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝
+			
+		    ＝＝＝＝＝＝＝＝＝＝＝＝在主工程的pom中配置＝＝＝＝＝＝＝＝＝＝＝＝＝＝
 			<modules>
 				<module>../ProjectName-Module1</module>
 				<module>../ProjectName-Module2</module>
 				<module>../ProjectName-Module(n)</module>
 			</modules>
-		    ＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝
+		    ＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝
 
 
 
@@ -281,7 +295,8 @@ Apache Maven3(Note:Maven3)
 
 12.继承：
 
-		在一个模块工程(或主工程)中配置一个通用模版式的pom，其它模块工程继承这个工程的配置，这个模版工程的的package是pom.目的是共享里面的配置比如lib的依赖，就只用在parent的pom中配置了
+		在一个模块工程(或主工程)中配置一个通用模版式的pom，其它模块工程继承这个工程的配置，这个模版工程的的package是pom
+		目的是共享里面的配置消除重复配置,比如lib的依赖,就只用在parent的pom中配置了
 	
 		以上述聚合(1)目录结构为例，如果以ProjectName为parent
 		
