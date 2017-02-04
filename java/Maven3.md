@@ -189,16 +189,32 @@ Apache Maven3(Note:Maven3)
 
 
 9.仓库：
-
 		
+		存储构件(依赖*.jar,maven插件,项目输出jar)的场所
+		多个项目的依赖jar统一存放在maven仓库,而不是多个项目各自的copy,编译打包时设置坐标到classpath使用构件
+		寻找路径:本地仓库(有更新则更新)->代理仓库(可有可无)->中央仓库
 		
-		寻找路径:本地仓库->代理仓库(可有可无)->中央仓库
- 
+		1.本地仓库
+			一个构件只有在本地仓库中才能供其他maven项目来使用
+			
+			本地仓库的位置:
+			Default: ${user.home}/.m2/repository
+  			<localRepository>/path/to/local/repo</localRepository>
+		
+			如果开发的构件需要供其他maven项目使用 则需要mvn install来安装到本地仓库中
+			
+		2.远程仓库
+		
+			中央仓库:setting.xml中可以设置,项目的pom中可以设置,超级pom可以设置
+			
+			私服:减少外网流量,部署没有被任何中央仓库收藏的构件
+ 		
 
 10.Maven的UI界面搜索：
 
 		http://repository.sonatype.org	
-		http://mvnrepository.com	
+		http://mvnrepository.com
+			
  
 
 11.聚合:
