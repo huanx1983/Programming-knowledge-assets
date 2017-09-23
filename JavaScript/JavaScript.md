@@ -9,6 +9,7 @@
   + 主要应用于Web浏览器(JavaScript的解释器的一种)宿主环境,是所有浏览器唯一支持的通用语言
   + 用于脱离Web环境,如NodeJs(JavaScript的解释器的一种,如果宿主环境是服务器，则会提供各种操作系统的API,比如文件操作API,网络通信API等等)
   + 每种宿主环境都实现ECMAScript并且扩展ECMAScript(加入部分宿主预定义的对象)
+  + ECMAScript和JavaScript的关系是，前者是后者的规格，后者是前者的一种实现
    
    
 3.数据类型及表达
