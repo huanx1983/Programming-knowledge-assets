@@ -351,5 +351,13 @@
                     5.匿名调用
                       (function(x){})(1)
                       (function F(x,y){})(1,2)
+                    6.var f=function ABC(a){ return 1}
+                        f.name          //ABC
+                        f.length        //1
+                        f.toString()    // return 1
+                        
+23.REF
++ http://javascript.ruanyifeng.com/
++ http://es6.ruanyifeng.com/#README
 					  	  
 					
