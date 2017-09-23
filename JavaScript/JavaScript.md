@@ -31,13 +31,12 @@
                     
         var x=undefined;
         
-        typeof  "11" = "string"         typeof new String("11") = "object"
+        typeof  "11" = "string"         typeof new String("11") = "object"  
         typeof  123 = "number"          typeof new Number(123) = "object"
         typeof  true ="boolean"         typeof new Boolean(true) = "object"
         typeof  undefined="undefined"   typeof ref_object = "object"
         typeof  null= "object"
         
- 
         特殊
         typeof function(){}= "function"
         typeof new Function()="function"
@@ -287,7 +286,7 @@
     + 原型中继承下来的属性
 					
   + 对象分类:
-    + EMACScript内置对象或类:Array，Function，Date，RegExp
+    + *EMACScript内置对象或类:String,Array,Function,Date,RegExp*
     + 宿主:web浏览器中的dom,bom(任何HTMLElement,Navigator)，非web浏览器中的其他宿主的内置对象
     + 自定义对象 function A(){}
 
