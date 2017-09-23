@@ -293,19 +293,14 @@
                     var x={a:1,b:2}       	原型是Object.prototype
 					
 					
-            2.new 创建				原型是构造函数的.prototype
-                    var x=new Date()      	Date.prototype
-                    var x=new Array		  	Array.prototype	
-                    var x=new Function()  	Function,prototype
+            2.new 创建原型是构造函数的.prototype
+                    var x=new Date()        Date.prototype
+                    var x=new Array         Array.prototype	
+                    var x=new Function()    Function,prototype
 					
 					
             3.Object.create({})
 			
-
-
-
-
-
 
 19.JSON.stringfy(Obj)  JSON.parse(json string)
 
@@ -320,41 +315,38 @@
 
 21.ES5的数组 
 
-					[1,2,3].forEach(
-							function(e){
+                    [1,2,3].forEach(
+                            function(e){
 					
-							}
-					);
+                            }
+                    );
 					
-					var newArray=[1,2,3].map(
-							function(x){
-								return  op x;
-							}
-					);
+                    var newArray=[1,2,3].map(
+                            function(x){
+                                return  op x;
+                            }
+                    );
 					
-					[1,2,3].sort(function(x1,x2){
-					
-								return  x1>x2
-					
-					});
+                    [1,2,3].sort(function(x1,x2){
+					            return  x1>x2
+                    });
 					
 					
 22.函数
 
-					1.参数化输入(变长arguments),可有返回值,可一次定义,多次调用过程体
+                    1.参数化输入(变长arguments),可有返回值,可一次定义,多次调用过程体
+                    2.每次调用都隐式伴随this传递(当函数挂载在一个对像上时,函数调用就是方法调用,this就是该对象;如果仅仅是函数调用this是undefined)
+	                3.可嵌套定义
 					
-					2.每次调用都隐式伴随this传递(当函数挂载在一个对像上时,函数调用就是方法调用,this就是该对象;如果仅仅是函数调用this是undefined)
-					4.可嵌套定义
 					
-					
-					调用方式:
-					1.函数调用
-					2.方法调用
-					3.构造器调用
-					4.间接调用 call apply
-					  函数可以作为任何对象的方法来调用，即使函数没有在该方法中定义
-					5.匿名调用
-					  	(function(x){})(1)
-					  	(function F(x,y){})(1,2)
+	                调用方式:
+	                1.函数调用
+	                2.方法调用
+	                3.构造器调用
+	                4.间接调用 call apply
+	                  函数可以作为任何对象的方法来调用，即使函数没有在该方法中定义
+	                5.匿名调用
+	                   (function(x){})(1)
+	                   (function F(x,y){})(1,2)
 					  	  
 					
