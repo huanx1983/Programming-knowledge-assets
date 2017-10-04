@@ -215,33 +215,45 @@
 	
 	
 9.form
-
-	<form>
-		 <input type="text" name="firstname"><br>
-		 <input type="password" name="pwd">
-		 
-		 <input type="radio" name="sex" value="male">Male<br>
-		 <input type="radio" name="sex" value="female">Female
-		 
-		 <input type="checkbox" name="vehicle" value="Bike">I have a bike<br>
-		 <input type="checkbox" name="vehicle" value="Car">I have a car 
-		 
-		 <input type="submit" value="Submit">
-	</form>
-
+            
+            <form>
+            <input type="text" name="firstname"><br>
+            <input type="password" name="pwd">
+            <input type="radio" name="sex" value="male">Male
+            <input type="radio" name="sex" value="female">Female
+            <input type="checkbox" name="vehicle" value="Bike">I have a bike<br>
+            <input type="checkbox" name="vehicle" value="Car">I have a car 
+            <input type="submit" value="Submit">
+            </form>
+	
+	
 	<form>	定义供用户输入的表单
+	
 	<input>	定义输入域
+	
 	<textarea>	定义文本域 (一个多行的输入控件)
+	
 	<label>	定义了 <input> 元素的标签，一般为输入标题
+	
 	<fieldset>	定义了一组相关的表单元素，并使用外框包含起来
+	
 	<legend>	定义了 <fieldset> 元素的标题
+	
 	<select>	定义了下拉选项列表
+	
 	<optgroup>	定义选项组
+	
 	<option>	定义下拉列表中的选项
+	
 	<button>	定义一个点击按钮
+	
 	<datalist>New	指定一个预先定义的输入控件选项列表
+	
 	<keygen>New	定义了表单的密钥对生成器字段
+	
 	<output>New	定义一个计算结果
+	
+	
 
 
 
@@ -255,18 +267,15 @@
 	
 	
 	
-11.ref: 
-+ http://www.runoob.com/html/html-quicklist.html
+11.[资料](http://www.runoob.com/html/html-quicklist.html)
 
 
 
 12.html5
-
-
 + 新特性：
 
-	用于绘画的 canvas 元素
-	用于媒介回放的 video 和 audio 元素
-	对本地离线存储的更好的支持
-	新的特殊内容元素，比如 article、footer、header、nav、section
-	新的表单控件，比如 calendar、date、time、email、url、search
+	+ 用于绘画的 canvas 元素
+	+ 用于媒介回放的 video 和 audio 元素
+	+ 对本地离线存储的更好的支持
+	+ 新的特殊内容元素，比如 article、footer、header、nav、section
+	+ 新的表单控件，比如 calendar、date、time、email、url、search
