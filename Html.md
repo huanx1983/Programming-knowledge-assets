@@ -60,107 +60,108 @@ Note:只有body区域才会在浏览器中显示。
 	
 4.标签
 
-	1.根标签
++ 根标签
 	
-	<html>...</html>
+	    <html>...</html>
 	
 	
-	2.body部分被浏览器UI化
++ body部分被浏览器UI化
 	
-	<body>...</body>
+	    <body>...</body>
 
 
-	3.文档主体部分的标题
++ 文档主体部分的标题
 	
-	<h1>这是一个标题</h1>
-	<h2>这是一个标题</h2>
-	<h3>这是一个标题</h3>
-	<h6>这是一个标题</h6>
-	
-	
-	4.段落,会自动站一新行
-	
-	<p>这是一个段落。</p>
-	<p>这是另外一个段落。</p>
+	    <h1>这是一个标题</h1>
+	    <h2>这是一个标题</h2>
+	    <h3>这是一个标题</h3>
+	    <h6>这是一个标题</h6>
 	
 	
-	5.换行(非新段落p)
++ 段落,会自动站一新行
 	
-	<br/>
-	
-	
-	6.水平线
-	
-	<hr></hr>
+	    <p>这是一个段落。</p>
+	    <p>这是另外一个段落。</p>
 	
 	
-	7.link
++ 换行(非新段落p)
 	
-	<a href="http://www.baidu.com">这是一个链接</a>
-	
-	
-	8.图片
-	
-	<img src="abc.png" width="100" height="100">
+	    <br/>
 	
 	
-	9.<!-- 这是一个注释 -->
++ 水平线
+	
+	    <hr></hr>
 	
 	
-	10.
-	<strong> 替换加粗标签 <b>  
++ link
+	
+	    <a href="http://www.baidu.com">这是一个链接</a>
+	
+	
++ 图片
+	
+	    <img src="abc.png" width="100" height="100">
+	
+	
++ <!-- 这是一个注释 -->
+	
+	
++ <strong> 替换加粗标签 <b>  
 	  
 	  
-	11.
-	 
-	<em> 替换 <i>标签使用
++ <em> 替换 <i>标签使用
 	
-	
-	HTML 			文本格式化标签
-	标签				描述
-	<b>				定义粗体文本
-	<em>			定义着重文字
-	<i>				定义斜体字
-	<small>			定义小号字
-	<strong>		定义加重语气
-	<sub>			定义下标字
-	<sup>			定义上标字
-	<ins>			定义插入字
-	<del>			定义删除字
-	
-	
-	HTML "计算机输出" 标签
-	标签				描述
-	<code>			定义计算机代码
-	<kbd>			定义键盘码
-	<samp>			定义计算机代码样本
-	<var>			定义变量
-	<pre>			定义预格式文本
-	
-	
-	HTML 引文, 引用, 及标签定义
-	标签				描述
-	<abbr>			定义缩写
-	<address>		定义地址
-	<bdo>			定义文字方向
-	<blockquote>	定义长的引用
-	<q>				定义短的引用语
-	<cite>			定义引用、引证
-	<dfn>			定义一个定义项目
-	
-	
-	
-	HTML <head> 元素
-	<head> 元素包含了所有的头部标签元素。在 <head>元素中你可以插入脚本（scripts）, 样式文件（CSS），及各种meta信息。
-	可以添加在头部区域的元素标签为: <title>, <style>, <meta>, <link>, <script>, <noscript>, and <base>.
-	
-	http://www.w3school.com.cn/html/html_quick.asp
-	http://www.w3school.com.cn/html/html5_intro.asp
-	http://www.w3school.com.cn/html/html5_browsers.asp
++ 标签	
 
-5.CSS
+        HTML            文本格式化标签
+        标签				描述
+        <b>				定义粗体文本
+        <em>			定义着重文字
+        <i>				定义斜体字
+        <small>			定义小号字
+        <strong>		定义加重语气
+        <sub>			定义下标字
+        <sup>			定义上标字
+        <ins>			定义插入字
+        <del>			定义删除字
+        
+        
+        HTML "计算机输出" 标签
+        标签				描述
+        <code>			定义计算机代码
+        <kbd>			定义键盘码
+        <samp>			定义计算机代码样本
+        <var>			定义变量
+        <pre>			定义预格式文本
+        
+        
+        HTML 引文, 引用, 及标签定义
+        标签				描述
+        <abbr>			定义缩写
+        <address>		定义地址
+        <bdo>			定义文字方向
+        <blockquote>	定义长的引用
+        <q>				定义短的引用语
+        <cite>			定义引用、引证
+        <dfn>			定义一个定义项目
+        
+        
+        
+        
+        HTML <head> 元素
+	    <head> 元素包含了所有的头部标签元素。在 <head>元素中你可以插入脚本（scripts）, 样式文件（CSS），及各种meta信息。
+	    可以添加在头部区域的元素标签为: <title>, <style>, <meta>, <link>, <script>, <noscript>, and <base>.
+	
+	    http://www.w3school.com.cn/html/html_quick.asp
+	    http://www.w3school.com.cn/html/html5_intro.asp
+	    http://www.w3school.com.cn/html/html5_browsers.asp
+
+
++ CSS
 
 	形式:
+	
 	1.<head>
 			<style type="text/css">
 				body {background-color:yellow;}
@@ -168,9 +169,7 @@ Note:只有body区域才会在浏览器中显示。
 			</style>
 	  </head>
 	  
-	  
 	2.<link rel="stylesheet" type="text/css" href="mystyle.css">
-	
 	
 	3.<h1 style="text-align:center;">Center-aligned heading</h1>
 	
