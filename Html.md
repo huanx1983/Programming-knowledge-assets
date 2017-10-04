@@ -1,10 +1,11 @@
 1.是什么
 
-+ HTML(HyperText Markup Language)是用来描述网页的一种标记语言,不是编程语言.
-+ HTML是一套标记标签的集合,HTML文档包含了HTML标签及文本内容.
++ HTML(HyperText Markup Language)是用来描述网页的一种标记语言,不是编程语言
++ HTML是一套标记标签的集合,HTML文档包含了HTML标签及文本内容
 + HTML使用标记标签来描述网页,HTML文档也叫做web页面,HTML运行于能解析HTML标签的解析器(浏览器)
-+ HTML 是一种在Web上使用的通用标记语言。HTML允许你格式化文本，添加图片，创建链接、输入表单、框架和表格等等，并可将之存为文本文件，浏览器即可读取和显	示。
-+ HTML 的关键是标签，其作用是指示将出现的内容。
++ HTML 是一种在Web上使用的通用标记语言
++ HTML允许你格式化文本，添加图片，创建链接、输入表单、框架和表格等等，并可将之存为文本文件，浏览器即可读取和显示
++ HTML 的关键是标签，其作用是指示将出现的内容
 	
 2.形式
 + <标签>内容</标签>
@@ -22,7 +23,7 @@
                 <p>这是另外一个段落。</p>
             </body>
         </html>
-Note:只有body区域才会在浏览器中显示。
++ 只有body区域才会在浏览器中显示。
 	
 3.版本
 + HTML          1991
@@ -52,10 +53,10 @@ Note:只有body区域才会在浏览器中显示。
 	属性总是以名称/值对的形式出现，比如：name="value"
 	
 + 适用于所有元素的属性
-	class	为html元素定义一个或多个类名（classname）(类名从样式文件引入)
-	id	定义元素的唯一id
-	style	规定元素的行内样式（inline style）
-	title	描述了元素的额外信息 (作为工具条使用)
+    + class 为html元素定义一个或多个类名（classname）(类名从样式文件引入)
+    + id    定义元素的唯一id
+    + style 规定元素的行内样式（inline style）
+    + title 描述了元素的额外信息 (作为工具条使用)
 	
 	
 4.标签
@@ -104,7 +105,6 @@ Note:只有body区域才会在浏览器中显示。
 	    <img src="abc.png" width="100" height="100">
 	
 	
-+ <!-- 这是一个注释 -->
 	
 	
 + <strong> 替换加粗标签 <b>  
@@ -158,16 +158,15 @@ Note:只有body区域才会在浏览器中显示。
 	    http://www.w3school.com.cn/html/html5_browsers.asp
 
 
-+ CSS
+5.CSS
 
-	形式:
 	
-	1.<head>
-			<style type="text/css">
+    1.  <head>
+                <style type="text/css">
 				body {background-color:yellow;}
 				p {color:blue;}
-			</style>
-	  </head>
+				</style>
+	    </head>
 	  
 	2.<link rel="stylesheet" type="text/css" href="mystyle.css">
 	
@@ -251,30 +250,20 @@ Note:只有body区域才会在浏览器中显示。
 
 10.标签使用情况
 
-	较多 html body style a img hn div span  ul ol li p  br  
-	较少 table hr 
++ 较多 html body style a img hn div span  ul ol li p  br  
++ 较少 table hr 
 	
 	
 	
-ref: http://www.runoob.com/html/html-quicklist.html
+11.ref: 
++ http://www.runoob.com/html/html-quicklist.html
 
 
 
+12.html5
 
 
-
-
-
-
-
-
-
-
-
-html5
-
-
-1.新特性：
++ 新特性：
 
 	用于绘画的 canvas 元素
 	用于媒介回放的 video 和 audio 元素
