@@ -108,3 +108,148 @@
         
         
         const Point=class Point{}
+        
+        
+7.Bast Practise
++ let取代var
++ const取代var(特别是全局范围)
+
++ 单引号取代双引号
+        
+        const a = "foobar";  bad
+        const a = 'foobar';  good
+        
++ 数组对变量赋值优先使用解构
+        
+        const arr = [1, 2, 3, 4];
+        
+        // bad
+        const first = arr[0];
+        const second = arr[1];
+        
+        // good
+        const [first, second] = arr;
+        
++ 函数的参数如果是对象成员优先使用解构
+
+        // bad
+        function getFullName(user) {
+          const firstName = user.firstName;
+          const lastName = user.lastName;
+        }
+        
+        // good
+        function getFullName(obj) {
+          const { firstName, lastName } = obj;
+        }
+        
+        // best
+        function getFullName({ firstName, lastName }) {
+        }
++ 函数返回多值时优先使用解构
+
+        // bad
+        function processInput(input) {
+          return [left, right, top, bottom];
+        }
+        
+        // good
+        function processInput(input) {
+          return { left, right, top, bottom };
+        }
+        
+        const { left, right } = processInput(input);
+        
++ Class代替prototype
+
+        // bad
+        function Queue(contents = []) {
+          this._queue = [...contents];
+        }
+        Queue.prototype.pop = function() {
+          const value = this._queue[0];
+          this._queue.splice(0, 1);
+          return value;
+        }
+        
+        // good
+        class Queue {
+          constructor(contents = []) {
+            this._queue = [...contents];
+          }
+          pop() {
+            const value = this._queue[0];
+            this._queue.splice(0, 1);
+            return value;
+          }
+        }
+        
++ extends实现继承
+
+        // bad
+        const inherits = require('inherits');
+        function PeekableQueue(contents) {
+          Queue.apply(this, contents);
+        }
+        inherits(PeekableQueue, Queue);
+        PeekableQueue.prototype.peek = function() {
+          return this._queue[0];
+        }
+        
+        // good
+        class PeekableQueue extends Queue {
+          peek() {
+            return this._queue[0];
+          }
+        }
+        
++ import 取代 require
+
+        // bad
+        const moduleA = require('moduleA');
+        const func1 = moduleA.func1;
+        const func2 = moduleA.func2;
+        
+        // good
+        import { func1, func2 } from 'moduleA';
+        
++ export取代module.exports
+
+        // commonJS的写法
+        var React = require('react');
+        
+        var Breadcrumbs = React.createClass({
+          render() {
+            return <nav />;
+          }
+        });
+        
+        module.exports = Breadcrumbs;
+        
+        // ES6的写法
+        import React from 'react';
+        
+        class Breadcrumbs extends React.Component {
+          render() {
+            return <nav />;
+          }
+        };
+        
+        export default Breadcrumbs;
+
+        
++ 如果模块默认输出一个函数，函数名的首字母应该小写
+
+        function makeStyleGuide() {
+        }
+        
+        export default makeStyleGuide;
+        
++ 如果模块默认输出一个对象，对象名的首字母应该大写
+
+        const StyleGuide = {
+          es6: {
+          }
+        };
+        
+        export default StyleGuide;
