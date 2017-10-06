@@ -66,6 +66,36 @@
         object.property1 <==>object.property1() or object.setProperty1(...)
         
 
-4.#import代替#include解决重复倒入问题
+4.#import代替#include解决重复导入问题
 
 5.C in OC
++ 就是c语言中的函数,函数不属于class,*.h和*.m中分别定义和实现
+
++ Block(OC对C的扩展)
+    
+        BlockReturnType (^BlockName)(arg1Type,arg2Type)=^(arg1Type arg1,arg2Type arg2){
+    
+            BlockReturnType var=1;
+            return var;
+    
+        }
+        
++ 结构
+        
+        typedef struct _S{
+        
+            int a;
+            int b;
+        
+        } S;
+        
+
+
+
+6.OC对象本质
+
+
+
+
+    
+
