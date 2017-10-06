@@ -33,9 +33,7 @@
         
         NewClassName.m
         
-        
         @interface NewClassName()  //未命名分类,直接interface和implement在 *.m 文件中,可以定义property
-        
         int globalVar=0;
         static int fileGlobalVar=0;
         @implements NewClassName
@@ -63,7 +61,7 @@
         @end
         
         
-        object.property1 <==>object.property1() or object.setProperty1(...)
+        object.property1 <==>object.property1() o r object.setProperty1(...)
         
 
 4.#import代替#include解决重复导入问题
@@ -89,7 +87,13 @@
         
         } S;
         
++ 枚举 
 
+        typedef enum _N{
+         A,
+         B,
+         C
+        } N
 
 
 6.OC对象本质
@@ -98,9 +102,28 @@
 + 对象变量就是指针
 + 方法是函数,消息表达式是函数调用
 + id是通用指针类型
++ 常用数据类型
+    + NSRange
+    + NSPoint
+    + NSSize
+    + NSRect
 
 
-
+7.SDK
+        
+        /System/Library/Frameworks/*.framwork/Headers
+        
+        Application
+        Cocoa(Foundation,AppKit(UIKit(Cocoa Touch)),Core Data)
+        Application Service
+        Core Service
+        Mac OS X kernel
 
     
+8.@class
++ A.h B.h相互引用时使用避免编译错误
 
+9.init
++ 一个类有多个init
++ 一个类有一个指定的默认init(参数最多那个)
++ 子类要显示调用父类的指定的默认init
