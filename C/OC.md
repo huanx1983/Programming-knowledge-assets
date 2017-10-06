@@ -64,3 +64,8 @@
         
         
         object.property1 <==>object.property1() or object.setProperty1(...)
+        
+
+4.#import代替#include解决重复倒入问题
+
+5.C in OC
