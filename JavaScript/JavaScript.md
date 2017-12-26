@@ -10,6 +10,7 @@
   + 也用于脱离Web环境,如NodeJs(JavaScript的解释器的一种,如果宿主环境是服务器，则会提供各种操作系统的API,比如文件操作API,网络通信API等等)
   + 每种宿主环境都实现ECMAScript并且扩展ECMAScript(加入部分宿主预定义的对象)
   + ECMAScript和JavaScript的关系是，前者是后者的规格，后者是前者的一种实现
+  + ActionScript也是ECMAScript的一种实现
    
    
 3.数据类型及表达
@@ -95,7 +96,7 @@
 				
 4.浏览器环境下的JS，
 
-+ 主要由ES,BOM,DOM,CSS组成
++ 主要由ES(基本语言),BOM(浏览器对象相关编程接口),DOM(针对XML文档的编程接口,包括CSS的接口)
 + 浏览器环境顶级对象是window,非浏览器环境顶级对象是global(var global=this;)
 + 宿主环境的初始化后，会在顶级对象上赋予预定义的全局值(仅跟ES相关的初始属性)
    + 全局属性 undefined，Infinity，NaN
@@ -214,7 +215,7 @@
                     var x=new Date();
 
                     x instanceof Date			true
-                    x instanceof Obeject		true
+                    x instanceof Object		true
                     x instanceof Number			false
 					
                     var x=[1,2,3,4]
