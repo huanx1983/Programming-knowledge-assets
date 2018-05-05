@@ -253,3 +253,4 @@
         };
         
         export default StyleGuide;
++ http://es6.ruanyifeng.com/#docs/style
